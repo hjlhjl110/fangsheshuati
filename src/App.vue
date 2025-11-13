@@ -1,0 +1,17 @@
+<template>
+  <div id="app" class="min-h-screen bg-gray-50">
+    <router-view />
+  </div>
+</template>
+
+<script setup lang="ts">
+import { RouterView } from 'vue-router'
+</script>
+
+<style scoped>
+#app {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>

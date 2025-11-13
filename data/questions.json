@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "question": "测试题目 - API是否工作？",
+    "options": [
+      "A、选项1",
+      "B、选项2",
+      "C、选项3",
+      "D、选项4"
+    ],
+    "answer": "A",
+    "explanation": "这是一个测试题目，用于验证API功能",
+    "hasImage": false,
+    "imagePath": ""
+  }
+]
