@@ -132,7 +132,7 @@
                     @change="handleFileSelect"
                     class="file-input"
                   >
-                  <div class="upload-content" @click="$refs.fileInput.click()">
+                  <div class="upload-content" @click="handleUploadClick">
                     <svg class="upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
                     </svg>
@@ -312,6 +312,11 @@ const selectImage = (imagePath: string) => {
 const clearImage = () => {
   editedQuestion.value.imagePath = ''
   editedQuestion.value.hasImage = false
+}
+
+// 处理上传点击
+const handleUploadClick = () => {
+  fileInput.value?.click()
 }
 
 // 文件选择处理
