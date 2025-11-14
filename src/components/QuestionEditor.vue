@@ -66,6 +66,15 @@
           </div>
 
           <div class="form-group">
+            <label class="form-label">题型</label>
+            <select v-model="editedQuestion.type" class="form-select">
+              <option value="">未指定</option>
+              <option value="single">单选</option>
+              <option value="multiple">多选</option>
+            </select>
+          </div>
+
+          <div class="form-group">
             <label class="form-label">是否有图片</label>
             <div class="checkbox-group">
               <input 

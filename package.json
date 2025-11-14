@@ -7,6 +7,9 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
+    "migrate": "node scripts/migrate.js",
+    "migrate:supabase": "node scripts/migrate-to-supabase.mjs",
+    "fix:types": "node scripts/fix-question-types.mjs",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "type-check": "vue-tsc --noEmit",
     "test": "vitest"
@@ -14,7 +17,10 @@
   "dependencies": {
     "vue": "^3.4.0",
     "vue-router": "^4.2.5",
-    "pinia": "^2.1.7"
+    "pinia": "^2.1.7",
+    "sql.js": "^1.9.0",
+    "@supabase/supabase-js": "^2.45.1",
+    "jszip": "^3.10.1"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.6.0",

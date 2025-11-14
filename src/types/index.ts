@@ -6,6 +6,7 @@ export interface Question {
   explanation: string
   hasImage: boolean
   imagePath: string
+  type?: string
 }
 
 export interface AnswerRecord {

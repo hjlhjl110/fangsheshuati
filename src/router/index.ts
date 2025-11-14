@@ -1,11 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
 import Question from '@/views/Question.vue'
 import WrongBook from '@/views/WrongBook.vue'
 import Results from '@/views/Results.vue'
+import Auth from '@/views/Auth.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
@@ -26,6 +27,12 @@ const router = createRouter({
       path: '/results',
       name: 'results',
       component: Results
+    }
+    ,
+    {
+      path: '/auth',
+      name: 'auth',
+      component: Auth
     }
   ]
 })
