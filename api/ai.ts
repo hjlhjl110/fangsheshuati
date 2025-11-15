@@ -2,13 +2,13 @@ import type { VercelRequest, VercelResponse } from '@vercel/node'
 
 const BASE_URL = process.env.HUNYUAN_BASE_URL as string | undefined
 const API_KEY = process.env.HUNYUAN_API_KEY as string | undefined
-const MODEL = (process.env.HUNYUAN_MODEL as string | undefined) || 'hunyuan-lite'
+const MODEL = process.env.HUNYUAN_MODEL as string | undefined
 
 function buildPrompt(q: any): string {
   const qt = q?.type as (string | undefined)
   const lines = [
     '请按以下格式输出两行：',
-    '答案：,（根据题型给出答案，单选只能是一个答案，多选使用中文顿号“、”分隔）',
+    '答案：（根据题型给出答案，单选只能是一个答案，多选使用中文顿号“、”分隔）',
     '解析：……',
     qt ? `题型：${qt === 'multiple' ? '多选' : '单选'}` : undefined,
     `题目：${q?.question ?? ''}`,
